@@ -14,13 +14,13 @@ The main goals are to transform a (gpx) **track into a trip**.
 
 You can install *TrackToTrip* with *[pip](https://pypi.python.org/pypi/tracktotrip)* or *EasyInstall*,
 
-```
+``` bash
 pip install tracktotrip
 ```
 
 or
 
-```
+``` bash
 easy_install install tracktotrip
 ```
 
@@ -36,11 +36,13 @@ The starting points are the [Track](../master/tracktotrip/track.py), [Segment](.
 
 Can be loaded from a GPX file:
 
-````python
+``` python
 from tracktotrip import Track, Segment, Point
 
 track = Track.from_gpx('file_to_track.gpx')
 ```
+
+
 
 A track can be transformed into a trip with the method ` to_trip `. Transforming a track into a trip executes the following steps:
 
@@ -54,7 +56,7 @@ A track is composed by ` Segment `s, and each segment by ` Point `s.
 
 It can be saved to a GPX file:
 
-````python
+``` python
 with open('file.gpx', 'w') as f:
   f.write(track.to_gpx())
 ```
